@@ -1,0 +1,63 @@
+import 'package:flutter/material.dart';
+
+import 'package:parking_demo/business/businessProfile/screen/businessProfile_screen.dart';
+
+import 'package:parking_demo/pahossSearching/pahossmapScreen.dart';
+import 'package:parking_demo/userprofile/userScreen.dart';
+
+class UserHomeScreen extends StatefulWidget {
+  const UserHomeScreen({Key key}) : super(key: key);
+
+  @override
+  State<UserHomeScreen> createState() => _MyStatefulWidgetState();
+}
+
+/// This is the private State class that goes with UserHomeScreen.
+class _MyStatefulWidgetState extends State<UserHomeScreen> {
+  int _selectedIndex = 0;
+  var _widgetOptions = [
+    UserScreen(),
+    GoogleMapping(),
+    BusinessProfileScreen(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: _widgetOptions.elementAt(_selectedIndex),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        showUnselectedLabels: true,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            backgroundColor: Colors.blue,
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Booking Status',
+          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.bookmark),
+          //   label: 'Booking Status',
+          // ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.verified_user),
+            label: 'Profile',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.amber[800],
+        onTap: _onItemTapped,
+      ),
+    );
+  }
+}
