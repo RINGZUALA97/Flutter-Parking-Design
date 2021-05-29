@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:parking_demo/business/businessProfile/provider/businessProfile_provider.dart';
+import 'package:parking_demo/business/businessProfile/provider/signdetail_provider.dart';
 import 'package:parking_demo/setup/provider/setup_provider.dart';
-import 'package:parking_demo/setup/screen/businessProfile_screen.dart';
+import 'package:parking_demo/setup/screen/userSignupscreen.dart';
+
 import 'package:parking_demo/userprofile/addpakingScreen.dart';
 
-import 'package:parking_demo/userprofile/userscreenBar.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -78,70 +78,70 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class UserLogin extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Container(
-        child: Column(
-          children: [
-            Text('Enter Personal Details'),
-            Container(
-              margin: EdgeInsets.only(
-                left: 20,
-                right: 40,
-              ),
-              child: TextFormField(
-                decoration: InputDecoration(hintText: 'Enter Your Name'),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                left: 20,
-                right: 40,
-              ),
-              child: TextFormField(
-                decoration: InputDecoration(hintText: 'Address'),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                left: 20,
-                right: 40,
-              ),
-              child: TextFormField(
-                decoration: InputDecoration(hintText: 'Motor Type and Number'),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                left: 20,
-                right: 40,
-              ),
-              child: TextFormField(
-                decoration: InputDecoration(hintText: 'Ph No'),
-              ),
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Center(
-              child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => (UserHomeScreen())));
-                  },
-                  child: Text('Submit')),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
+// class UserLogin extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(),
+//       body: Container(
+//         child: Column(
+//           children: [
+//             Text('Enter Personal Details'),
+//             Container(
+//               margin: EdgeInsets.only(
+//                 left: 20,
+//                 right: 40,
+//               ),
+//               child: TextFormField(
+//                 decoration: InputDecoration(hintText: 'Enter Your Name'),
+//               ),
+//             ),
+//             Container(
+//               margin: EdgeInsets.only(
+//                 left: 20,
+//                 right: 40,
+//               ),
+//               child: TextFormField(
+//                 decoration: InputDecoration(hintText: 'Address'),
+//               ),
+//             ),
+//             Container(
+//               margin: EdgeInsets.only(
+//                 left: 20,
+//                 right: 40,
+//               ),
+//               child: TextFormField(
+//                 decoration: InputDecoration(hintText: 'Motor Type and Number'),
+//               ),
+//             ),
+//             Container(
+//               margin: EdgeInsets.only(
+//                 left: 20,
+//                 right: 40,
+//               ),
+//               child: TextFormField(
+//                 decoration: InputDecoration(hintText: 'Ph No'),
+//               ),
+//             ),
+//             SizedBox(
+//               height: 40,
+//             ),
+//             Center(
+//               child: ElevatedButton(
+//                   onPressed: () {
+//                     Navigator.push(
+//                         context,
+//                         MaterialPageRoute(
+//                             builder: (context) => (UserHomeScreen())));
+//                   },
+//                   child: Text('Submit')),
+//             )
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 class AdminLoginScreen extends StatefulWidget {
   @override

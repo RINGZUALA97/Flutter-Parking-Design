@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:parking_demo/business/businessProfile/provider/businessProfile_provider.dart';
+
+import 'package:parking_demo/business/businessProfile/provider/signdetail_provider.dart';
 
 import 'package:provider/provider.dart';
 

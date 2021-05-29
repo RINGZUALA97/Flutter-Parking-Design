@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:parking_demo/business/businessProfile/screen/businessProfile_screen.dart';
+import 'package:parking_demo/business/businessProfile/screen/signinUserdetail.dart';
 
 import 'package:parking_demo/pahossSearching/pahossmapScreen.dart';
 import 'package:parking_demo/userprofile/userScreen.dart';
