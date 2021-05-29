@@ -1,7 +1,7 @@
-import 'package:parking_demo/booking/bookingService.dart';
-import 'package:parking_demo/booking/bookingmodelofSetup.dart';
-import 'package:parking_demo/booking/setup.dart';
 import 'package:parking_demo/database/helper.dart';
+import 'package:parking_demo/fileAsset/bookingService.dart';
+import 'package:parking_demo/fileAsset/bookingmodelofSetup.dart';
+import 'package:parking_demo/fileAsset/setup.dart';
 
 import 'package:sqflite/sqflite.dart';
 

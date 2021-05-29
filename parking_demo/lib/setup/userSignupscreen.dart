@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:parking_demo/setup/provider/setup_provider.dart';
+import 'package:parking_demo/setup/setup_provider.dart';
+
 import 'package:parking_demo/userprofile/userscreenBar.dart';
 
 import 'package:provider/provider.dart';

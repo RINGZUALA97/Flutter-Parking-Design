@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:parking_demo/business/businessProfile/provider/signdetail_provider.dart';
-import 'package:parking_demo/setup/provider/setup_provider.dart';
-import 'package:parking_demo/setup/screen/userSignupscreen.dart';
+import 'package:parking_demo/business/signdetail_provider.dart';
+import 'package:parking_demo/setup/setup_provider.dart';
+
+import 'package:parking_demo/setup/userSignupscreen.dart';
 
 import 'package:parking_demo/userprofile/addpakingScreen.dart';
 
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Pahoss',
       theme: ThemeData(
         primarySwatch: Colors.blue,

@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:parking_demo/db/employee.dart';
+import 'package:parking_demo/Booking/employee.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';

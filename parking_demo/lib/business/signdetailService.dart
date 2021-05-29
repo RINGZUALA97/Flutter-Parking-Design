@@ -1,5 +1,5 @@
-import 'package:parking_demo/booking/bookingmodelofSetup.dart';
 import 'package:parking_demo/database/helper.dart';
+import 'package:parking_demo/fileAsset/bookingmodelofSetup.dart';
 import 'package:sqflite/sqflite.dart';
 
 class BusinessProfileService {

@@ -1,10 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:parking_demo/fileAsset/bookingService.dart';
+import 'package:parking_demo/fileAsset/bookingmodelofSetup.dart';
 
-import 'package:parking_demo/booking/bookingService.dart';
-import 'package:parking_demo/booking/bookingmodelofSetup.dart';
-
-import 'package:parking_demo/setup/services/setup_service.dart';
+import 'package:parking_demo/setup/setup_service.dart';
 
 class SetupProvider extends ChangeNotifier {
   int setupStatus = SetupStatus.NOTSETUP;

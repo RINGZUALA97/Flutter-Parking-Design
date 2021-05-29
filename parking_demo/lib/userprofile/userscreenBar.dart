@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parking_demo/business/businessProfile/screen/signinUserdetail.dart';
+import 'package:parking_demo/business/signinUserdetail.dart';
 
 import 'package:parking_demo/pahossSearching/pahossmapScreen.dart';
 import 'package:parking_demo/userprofile/userScreen.dart';
@@ -42,7 +42,7 @@ class _MyStatefulWidgetState extends State<UserHomeScreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: 'Booking Status',
+            label: 'Gmap Searching',
           ),
           // BottomNavigationBarItem(
           //   icon: Icon(Icons.bookmark),

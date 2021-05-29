@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
-import 'package:parking_demo/booking/bookingmodelofSetup.dart';
 
-import 'package:parking_demo/business/businessProfile/services/signdetailService.dart';
+import 'package:parking_demo/business/signdetailService.dart';
+import 'package:parking_demo/fileAsset/bookingmodelofSetup.dart';
 
 class BusinessProfileProvider extends ChangeNotifier {
   BusinessProfileService _businessProfileService = new BusinessProfileService();

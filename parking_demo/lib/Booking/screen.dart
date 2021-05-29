@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:parking_demo/Booking/employee.dart';
+import 'package:parking_demo/Booking/helper.dart';
 
-import 'package:parking_demo/db/employee.dart';
-import 'package:parking_demo/db/helper.dart';
 import 'package:parking_demo/userprofile/userscreenBar.dart';
 
 class Screen extends StatefulWidget {
@@ -87,7 +87,7 @@ class _ScreenState extends State<Screen> {
                           MaterialPageRoute(
                               builder: (context) => (UserHomeScreen())));
                       Fluttertoast.showToast(
-                          msg: "Booking Succesfullyt",
+                          msg: "Booking Succesfully",
                           toastLength: Toast.LENGTH_LONG,
                           gravity: ToastGravity.CENTER,
                           timeInSecForIosWeb: 1,
