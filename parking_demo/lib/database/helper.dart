@@ -22,7 +22,7 @@ class DatabaseHelper {
     await db.execute('PRAGMA foreign_keys = ON');
   }
 
-  static const String businessProfileTable = 'businessProfile_table';
+  static const String businessProfileTable = 'Profile_table';
   String businessId = 'id';
   String businessName = 'name';
   String businessType = 'businessType';

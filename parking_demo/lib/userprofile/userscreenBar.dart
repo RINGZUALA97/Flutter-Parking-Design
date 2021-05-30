@@ -44,10 +44,6 @@ class _MyStatefulWidgetState extends State<UserHomeScreen> {
             icon: Icon(Icons.search),
             label: 'Gmap Searching',
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.bookmark),
-          //   label: 'Booking Status',
-          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.verified_user),
             label: 'Profile',
