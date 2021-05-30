@@ -44,7 +44,7 @@ class _BusinessProfileState extends State<BusinessProfile> {
                               labelText: 'Enter Name',
                             ),
                             onChanged: (value) {
-                              model.setBusinessName(value);
+                              model.setName(value);
                               print('enetr name is $value');
                             },
                             validator: (value) {
@@ -75,7 +75,7 @@ class _BusinessProfileState extends State<BusinessProfile> {
                               labelText: 'Motor Number',
                             ),
                             onChanged: (value) {
-                              model.setTypeOfBusiness(value);
+                              model.setmOTORnO(value);
                             },
                             validator: (value) {
                               if (value.isEmpty) {
@@ -125,7 +125,7 @@ class _BusinessProfileState extends State<BusinessProfile> {
                                       builder: (context) =>
                                           (UserHomeScreen())));
 
-                              model.saveBusinessProfile();
+                              model.saveUSEprofile();
                             },
                           )
                         ],

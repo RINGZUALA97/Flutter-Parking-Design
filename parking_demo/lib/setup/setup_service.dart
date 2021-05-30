@@ -25,7 +25,7 @@ class SetupService {
   }
 
   //-----------Save Business Profile-------------
-  Future<int> saveBusinessProfile(BusinessProfilemodel _payload) async {
+  Future<int> saveProfile(Profilemodel _payload) async {
     Database db = await DatabaseHelper.instance.db;
     int result = await db.insert(
       'businessProfile_table',

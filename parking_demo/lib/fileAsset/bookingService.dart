@@ -9,7 +9,7 @@ class BookingService {
     return db.insert('userBooking_table', _setup.toMap());
   }
 
-  Future<List<Map<String, dynamic>>> getBusinessProfileMapList() async {
+  Future<List<Map<String, dynamic>>> getProfileMapList() async {
     Database db = await DatabaseHelper.instance.db;
     final List<Map<String, dynamic>> result =
         await db.query('userBooking_table');
@@ -48,9 +48,8 @@ class BookingService {
     return result;
   }
 
-  Future<List<BookingProfiles>> getBusinessProfileList() async {
-    final List<Map<String, dynamic>> companyMapList =
-        await getBusinessProfileMapList();
+  Future<List<BookingProfiles>> getProfileList() async {
+    final List<Map<String, dynamic>> companyMapList = await getProfileMapList();
     final List<BookingProfiles> companyList = [];
     companyMapList.forEach((companyMap) {
       companyList.add(BookingProfiles.fromMap(companyMap));
@@ -59,9 +58,8 @@ class BookingService {
     return companyList;
   }
 
-  Future<BookingProfiles> getCurrentBusinessProfileList() async {
-    final List<Map<String, dynamic>> companyMapList =
-        await getBusinessProfileMapList();
+  Future<BookingProfiles> getCurrentProfileList() async {
+    final List<Map<String, dynamic>> companyMapList = await getProfileMapList();
     final List<BookingProfiles> companyList = [];
     companyMapList.forEach((companyMap) {
       companyList.add(BookingProfiles.fromMap(companyMap));

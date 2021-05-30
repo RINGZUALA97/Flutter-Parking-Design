@@ -10,22 +10,22 @@ class SetupProvider extends ChangeNotifier {
   bool isLoading;
 
   String _businessName;
-  String _typeOfBusiness;
+  String _motorNO;
   String _address;
   String _email;
 
   // SetupService _setupService = new SetupService();
 
-  String getBusinessName() => _businessName;
-  void setBusinessName(value) {
+  String getName() => _businessName;
+  void setName(value) {
     _businessName = value;
     notifyListeners();
     print('name is $value');
   }
 
-  String getTypeOfBusiness() => _typeOfBusiness;
-  void setTypeOfBusiness(value) {
-    _typeOfBusiness = value;
+  String getmotorNo() => _motorNO;
+  void setmOTORnO(value) {
+    _motorNO = value;
     notifyListeners();
   }
 
@@ -42,13 +42,13 @@ class SetupProvider extends ChangeNotifier {
   }
 
   //------Save Business Profile------------
-  void saveBusinessProfile() {
+  void saveUSEprofile() {
     SetupService _setupService = new SetupService();
-    _setupService.saveBusinessProfile(
+    _setupService.saveProfile(
       BusinessProfilemodel(
         name: _businessName,
         address: _address,
-        businessType: _typeOfBusiness,
+        motorNo: _motorNO,
         email: _email,
       ),
     );
