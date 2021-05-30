@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:parking_demo/profile/signdetail_provider.dart';
 
-import 'package:parking_demo/business/signdetail_provider.dart';
 import 'package:parking_demo/setup/setup_provider.dart';
 
 import 'package:parking_demo/setup/userSignupscreen.dart';
@@ -14,7 +14,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => SetupProvider()),
-        ChangeNotifierProvider(create: (context) => BusinessProfileProvider()),
+        ChangeNotifierProvider(create: (context) => ProfileProvider()),
       ],
       child: MyApp(),
     ),
@@ -66,10 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => (BusinessProfile())));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => (Profile())));
               },
               child: Text('User Login'),
             ),
@@ -79,71 +77,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-// class UserLogin extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(),
-//       body: Container(
-//         child: Column(
-//           children: [
-//             Text('Enter Personal Details'),
-//             Container(
-//               margin: EdgeInsets.only(
-//                 left: 20,
-//                 right: 40,
-//               ),
-//               child: TextFormField(
-//                 decoration: InputDecoration(hintText: 'Enter Your Name'),
-//               ),
-//             ),
-//             Container(
-//               margin: EdgeInsets.only(
-//                 left: 20,
-//                 right: 40,
-//               ),
-//               child: TextFormField(
-//                 decoration: InputDecoration(hintText: 'Address'),
-//               ),
-//             ),
-//             Container(
-//               margin: EdgeInsets.only(
-//                 left: 20,
-//                 right: 40,
-//               ),
-//               child: TextFormField(
-//                 decoration: InputDecoration(hintText: 'Motor Type and Number'),
-//               ),
-//             ),
-//             Container(
-//               margin: EdgeInsets.only(
-//                 left: 20,
-//                 right: 40,
-//               ),
-//               child: TextFormField(
-//                 decoration: InputDecoration(hintText: 'Ph No'),
-//               ),
-//             ),
-//             SizedBox(
-//               height: 40,
-//             ),
-//             Center(
-//               child: ElevatedButton(
-//                   onPressed: () {
-//                     Navigator.push(
-//                         context,
-//                         MaterialPageRoute(
-//                             builder: (context) => (UserHomeScreen())));
-//                   },
-//                   child: Text('Submit')),
-//             )
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
 
 class AdminLoginScreen extends StatefulWidget {
   @override

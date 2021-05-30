@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:parking_demo/pahossSearching/pahossmapScreen.dart';
 import 'package:parking_demo/profile/signinUserdetaiSreen.dart';
+
 import 'package:parking_demo/userprofile/userScreen.dart';
 
 class UserHomeScreen extends StatefulWidget {
@@ -17,7 +18,7 @@ class _MyStatefulWidgetState extends State<UserHomeScreen> {
   var _widgetOptions = [
     UserScreen(),
     GoogleMapping(),
-    BusinessProfileScreen(),
+    ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {

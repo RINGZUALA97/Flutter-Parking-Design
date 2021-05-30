@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:parking_demo/business/signdetail_provider.dart';
+import 'package:parking_demo/profile/signdetail_provider.dart';
 
 import 'package:provider/provider.dart';
 
-class BusinessProfileScreen extends StatefulWidget {
-  const BusinessProfileScreen({Key key}) : super(key: key);
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({Key key}) : super(key: key);
 
   @override
-  _BusinessProfileScreenState createState() => _BusinessProfileScreenState();
+  _ProfileScreenState createState() => _ProfileScreenState();
 }
 
-class _BusinessProfileScreenState extends State<BusinessProfileScreen> {
+class _ProfileScreenState extends State<ProfileScreen> {
   @override
   void initState() {
-    Provider.of<BusinessProfileProvider>(context, listen: false).loadData();
+    Provider.of<ProfileProvider>(context, listen: false).loadData();
     super.initState();
   }
 
@@ -25,7 +25,7 @@ class _BusinessProfileScreenState extends State<BusinessProfileScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Consumer<BusinessProfileProvider>(
+        child: Consumer<ProfileProvider>(
           builder: (context, model, child) {
             return model.isLoading
                 ? Center(
@@ -80,8 +80,8 @@ class _BusinessProfileScreenState extends State<BusinessProfileScreen> {
                               ),
                             ),
                             Text(
-                              model.businessProfileData.businessType != null
-                                  ? model.businessProfileData.businessType
+                              model.businessProfileData.motorNo != null
+                                  ? model.businessProfileData.motorNo
                                   : '',
                             ),
                           ],
