@@ -27,12 +27,8 @@ class DatabaseHelper {
   String businessName = 'name';
   String businessType = 'businessType';
   String businessAddress = 'address';
-  String businessCity = 'city';
-  String businessState = 'state';
-  String businessCountry = 'country';
+
   String businessEmail = 'email';
-  String businessGsttin = 'gstTin';
-  String businessPhoneNumber = 'phoneNumber';
 
   String userBookingTable = 'userBooking_table';
   String userBookingId = 'id';
@@ -71,12 +67,11 @@ class DatabaseHelper {
             $businessName TEXT,
             $businessType TEXT,
             $businessAddress TEXT,
-            $businessCity TEXT,
-            $businessState TEXT,
-            $businessCountry TEXT,
+          
+       
             $businessEmail TEXT,
-            $businessGsttin TEXT,
-            $businessPhoneNumber INT )''',
+           
+            )''',
     );
 
     await db.execute(
