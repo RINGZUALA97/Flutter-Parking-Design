@@ -45,7 +45,7 @@ class SetupProvider extends ChangeNotifier {
   void saveUSEprofile() {
     SetupService _setupService = new SetupService();
     _setupService.saveProfile(
-      BusinessProfilemodel(
+      Profilemodel(
         name: _businessName,
         address: _address,
         motorNo: _motorNO,

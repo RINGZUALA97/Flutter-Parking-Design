@@ -1,25 +1,25 @@
-class BusinessProfilemodel {
+class Profilemodel {
   int id;
   String name;
   String address;
 
   String email;
 
-  String businessType;
+  String motorNo;
   // 0 - Incomplete, 1 - Complete
 
-  BusinessProfilemodel({
+  Profilemodel({
     this.name,
     this.address,
     this.email,
-    this.businessType,
+    this.motorNo,
   });
-  BusinessProfilemodel.withId({
+  Profilemodel.withId({
     this.id,
     this.name,
     this.address,
     this.email,
-    this.businessType,
+    this.motorNo,
   });
 
   Map<String, dynamic> toMap() {
@@ -32,18 +32,18 @@ class BusinessProfilemodel {
 
     map['email'] = email;
 
-    map['businessType'] = businessType;
+    map['motorNo'] = motorNo;
 
     return map;
   }
 
-  factory BusinessProfilemodel.fromMap(Map<String, dynamic> map) {
-    return BusinessProfilemodel.withId(
+  factory Profilemodel.fromMap(Map<String, dynamic> map) {
+    return Profilemodel.withId(
       id: map['id'],
       name: map['name'],
       address: map['address'],
       email: map['email'],
-      businessType: map['businessType'],
+      motorNo: map['motorNo'],
     );
   }
 }

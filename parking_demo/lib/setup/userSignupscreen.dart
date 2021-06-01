@@ -7,14 +7,14 @@ import 'package:provider/provider.dart';
 
 final _formKey = GlobalKey<FormState>();
 
-class BusinessProfile extends StatefulWidget {
-  BusinessProfile({Key key}) : super(key: key);
+class Profile extends StatefulWidget {
+  Profile({Key key}) : super(key: key);
 
   @override
-  _BusinessProfileState createState() => _BusinessProfileState();
+  _ProfileState createState() => _ProfileState();
 }
 
-class _BusinessProfileState extends State<BusinessProfile> {
+class _ProfileState extends State<Profile> {
   // final TextEditingController _nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {

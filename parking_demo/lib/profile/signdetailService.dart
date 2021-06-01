@@ -2,11 +2,11 @@ import 'package:parking_demo/database/helper.dart';
 import 'package:parking_demo/fileAsset/bookingmodelofSetup.dart';
 import 'package:sqflite/sqflite.dart';
 
-class BusinessProfileService {
+class ProfileService {
   Future<List<Map<String, dynamic>>> getProfileMapList() async {
     Database db = await DatabaseHelper.instance.db;
     final List<Map<String, dynamic>> result =
-        await db.query('businessProfile_table');
+        await db.query('Profile_table');
     return result;
   }
 
