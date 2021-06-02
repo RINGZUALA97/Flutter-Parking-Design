@@ -32,8 +32,18 @@ class DatabaseHelpering {
     ${Contact.tblContact}(
     ${Contact.colId} INTEGER PRIMARY KEY AUTOINCREMENT,
     ${Contact.colName} TEXT NO NULL, 
-    ${Contact.colNumber} TEXT NO NULL) 
+    ${Contact.colNumber} TEXT NO NULL,
+    ${Contact.colAddress} TEXT NO NULL) 
       ''');
+
+    await db.execute('''
+    CREATE TABLE
+    ${Register.reRegister}(
+    ${Register.reId} INTEGER PRIMARY KEY AUTOINCREMENT,
+    ${Register.reName} TEXT NO NULL , 
+    ${Register.reNumber} TEXT NO NULL,
+    ${Register.reAddress} TEXT NO NULL)
+     ''');
   }
 
   Future<int> insertContact(Contact contact) async {
@@ -48,5 +58,24 @@ class DatabaseHelpering {
     return contacts.length == 0
         ? []
         : contacts.map((e) => Contact.fromMap(e)).toList();
+  }
+
+  Future<int> insertRegister(Register register) async {
+    Database db = await database;
+    print('asda');
+
+    return await db.insert(
+      Register.reRegister,
+      register.toMap(),
+    );
+  }
+
+  Future<List<Register>> fetchRegister() async {
+    Database db = await database;
+    List<Map> registers = await db.query(Register.reRegister);
+    print('s');
+    return registers.length == 0
+        ? []
+        : registers.map((e) => Register.fromMap(e)).toList();
   }
 }

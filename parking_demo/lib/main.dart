@@ -1,23 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:parking_demo/profile/signdetail_provider.dart';
-
-import 'package:parking_demo/setup/setup_provider.dart';
-
-import 'package:parking_demo/setup/userSignupscreen.dart';
+import 'package:parking_demo/Booking/newCreen.dart';
 
 import 'package:parking_demo/userprofile/addpakingScreen.dart';
-
-import 'package:provider/provider.dart';
+import 'package:parking_demo/userprofile/userscreenBar.dart';
 
 void main() {
   runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context) => SetupProvider()),
-        ChangeNotifierProvider(create: (context) => ProfileProvider()),
-      ],
-      child: MyApp(),
-    ),
+    MyApp(),
   );
 }
 
@@ -67,9 +56,18 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => (Profile())));
+                    MaterialPageRoute(builder: (context) => (SceenForUser())));
               },
               child: Text('User Login'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => (UserHomeScreen())));
+              },
+              child: Text('Skip'),
             ),
           ],
         ),

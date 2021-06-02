@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:parking_demo/Booking/detailUser.dart';
 
 import 'package:parking_demo/pahossSearching/pahossmapScreen.dart';
-import 'package:parking_demo/profile/signinUserdetaiSreen.dart';
 
 import 'package:parking_demo/userprofile/userScreen.dart';
 
@@ -18,7 +18,9 @@ class _MyStatefulWidgetState extends State<UserHomeScreen> {
   var _widgetOptions = [
     UserScreen(),
     GoogleMapping(),
-    ProfileScreen(),
+
+    // Screens(),
+    DetailUser(),
   ];
 
   void _onItemTapped(int index) {
@@ -47,7 +49,7 @@ class _MyStatefulWidgetState extends State<UserHomeScreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.verified_user),
-            label: 'Profile',
+            label: 'Screen',
           ),
         ],
         currentIndex: _selectedIndex,

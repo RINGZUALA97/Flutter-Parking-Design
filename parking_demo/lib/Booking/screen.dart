@@ -13,11 +13,9 @@ class Screen extends StatefulWidget {
 }
 
 class _ScreenState extends State<Screen> {
-  TextEditingController controller;
-  String name;
-  Contact _contact = Contact();
-  List<Contact> _contacts = [];
-  DatabaseHelpering _dbHelper;
+  Contact _contact = Contact(); //insert call
+  List<Contact> _contacts = []; //fetch call
+  DatabaseHelpering _dbHelper; //calling database
 
   final _formKey = GlobalKey<FormState>();
   @override
@@ -27,6 +25,7 @@ class _ScreenState extends State<Screen> {
       _dbHelper = DatabaseHelpering.instance;
     });
     _refresh();
+    print('is call');
   }
 
   @override
@@ -50,12 +49,7 @@ class _ScreenState extends State<Screen> {
           child: Column(
             children: <Widget>[
               TextFormField(
-                onChanged: (value) {
-                  setState(() {
-                    name = value;
-                  });
-                },
-                onSaved: (value) => setState(() => _contact.number = value),
+                onSaved: (value) => setState(() => _contact.name = value),
                 validator: (value) {
                   if (value.isEmpty) {
                     return 'Enter Name';
@@ -67,9 +61,20 @@ class _ScreenState extends State<Screen> {
                 ),
               ),
               TextFormField(
-                  onSaved: (value) => setState(() => _contact.name = value),
+                  onSaved: (value) => setState(() => _contact.number = value),
                   decoration: InputDecoration(
                     labelText: 'Vehicle Number',
+                  ),
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return 'Enter Vehicle Number';
+                    }
+                    return null;
+                  }),
+              TextFormField(
+                  onSaved: (value) => setState(() => _contact.address = value),
+                  decoration: InputDecoration(
+                    labelText: 'Address',
                   ),
                   validator: (value) {
                     if (value.isEmpty) {
@@ -106,6 +111,7 @@ class _ScreenState extends State<Screen> {
     setState(() {
       _contacts = x;
     });
+    print('yes$_contacts');
   }
 
   _submit() async {
@@ -131,6 +137,7 @@ class _ScreenState extends State<Screen> {
                       children: [
                         Text(_contacts[index].name.toUpperCase()),
                         Text(_contacts[index].number),
+                        Text(_contacts[index].address),
                       ],
                     ),
                   ),
